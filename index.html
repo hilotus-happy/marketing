@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>퓨어 래디언스 로션 - 순수하고 깨끗한 보습</title>
+    <!-- Tailwind CSS 로드 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* 기본 폰트 설정 및 배경 */
+        body {
+            font-family: "Inter", sans-serif;
+            background-color: #F7F7F7;
+        }
+        /* 메인 배너 비디오 컨테이너 스타일 */
+        .hero-video-container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .hero-video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: 0;
+            transform: translate(-50%, -50%);
+            /* 비디오 필터 (선명함과 깨끗한 느낌 강조) */
+            filter: brightness(0.9) contrast(1.1);
+        }
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.4); /* 밝은 오버레이 */
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        /* 상세 정보 섹션의 커스텀 비디오 스타일 (vid02, vid03용) */
+        .detail-video {
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HERO SECTION (vid01.mp4: 깨끗한 이미지 배경 비디오) -->
+    <section class="hero-video-container">
+        <!-- vid01.mp4: 제품의 깨끗한 이미지와 분위기 강조 (자동 재생) -->
+        <video class="hero-video" src="vid01.mp4" autoplay muted loop playsinline>
+            <source src="vid01.mp4" type="video/mp4">
+            브라우저가 비디오 재생을 지원하지 않습니다. (vid01.mp4)
+        </video>
+        
+        <div class="hero-overlay p-6">
+            <div class="bg-white/70 backdrop-blur-sm p-8 md:p-12 rounded-2xl shadow-2xl max-w-xl mx-auto">
+                <h1 class="text-5xl md:text-7xl font-extrabold text-[#0A6EBD] tracking-tight mb-4">
+                    Pure Radiance
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-700 font-light mb-8">
+                    자연이 선사하는 순수함, 피부에 깊은 안식처를 선물하세요.
+                </p>
+                <a href="#purchase-section" class="inline-block px-8 py-3 bg-[#0A6EBD] text-white text-lg font-semibold rounded-full hover:bg-blue-700 transition duration-300 transform hover:scale-105 shadow-xl">
+                    구매하기
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURES & DETAIL SECTION (vid02.mp4 및 vid03.mp4 통합) -->
+    <section class="py-20 md:py-32 bg-white">
+        <div class="container mx-auto px-6 max-w-6xl">
+            <h2 class="text-4xl font-bold text-center mb-16 text-gray-800">
+                촉촉함 그 이상, 피부 본연의 힘
+            </h2>
+            
+            <!-- 1. vid02.mp4와 텍스트 설명 (제형/성분 강조) -->
+            <div class="flex flex-col md:flex-row items-center gap-12 mb-20">
+                
+                <!-- 비디오 컨테이너 (좌측) -->
+                <div class="w-full md:w-1/2">
+                    <!-- vid02.mp4: 질감 및 사용감을 보여주는 상세 비디오 (컨트롤 제공) -->
+                    <video class="detail-video" controls loop poster="placeholder_vid02.jpg">
+                        <source src="vid02.mp4" type="video/mp4">
+                        브라우저가 비디오 재생을 지원하지 않습니다. (vid02.mp4)
+                    </video>
+                </div>
+
+                <!-- 텍스트 정보 컨테이너 (우측) -->
+                <div class="w-full md:w-1/2 space-y-8">
+                    <div class="p-6 bg-gray-50 rounded-xl border border-gray-200">
+                        <h3 class="text-2xl font-semibold text-[#0A6EBD] mb-2">
+                            💧 끈적임 없는 산뜻한 제형
+                        </h3>
+                        <p class="text-gray-600">
+                            가볍고 산뜻하게 발리지만, 피부 속 깊이 수분을 전달하여 하루 종일 촉촉함을 유지합니다. 지성 피부도 부담 없이 사용할 수 있습니다.
+                        </p>
+                    </div>
+                    
+                    <div class="p-6 bg-gray-50 rounded-xl border border-gray-200">
+                        <h3 class="text-2xl font-semibold text-[#0A6EBD] mb-2">
+                            🌿 순수 자연 성분의 진정 효과
+                        </h3>
+                        <p class="text-gray-600">
+                            민감한 피부를 위한 저자극 포뮬러로, 외부 환경에 지친 피부를 편안하게 진정시켜주고 밸런스를 맞춥니다.
+                        </p>
+                    </div>
+
+                    <div class="p-6 bg-gray-50 rounded-xl border border-gray-200">
+                        <h3 class="text-2xl font-semibold text-[#0A6EBD] mb-2">
+                            ✨ 깨끗한 흰색 병의 미니멀리즘
+                        </h3>
+                        <p class="text-gray-600">
+                            제품의 순수함을 상징하는 미니멀한 흰색 용기는 당신의 화장대를 더욱 깨끗하고 우아하게 만들어 줍니다.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+            
+            <!-- 2. vid03.mp4 단독 섹션 (모델 사용 모습 강조) -->
+            <div class="text-center mt-20 pt-10 border-t border-gray-100">
+                <h2 class="text-3xl font-bold text-gray-800 mb-8">
+                    피부 전문가의 선택, 믿을 수 있는 매일의 케어
+                </h2>
+                <div class="max-w-4xl mx-auto">
+                     <!-- vid03.mp4: 모델 사용 모습/피부 변화 강조 -->
+                    <video class="detail-video mx-auto" controls loop poster="placeholder_vid03.jpg">
+                        <source src="vid03.mp4" type="video/mp4">
+                        브라우저가 비디오 재생을 지원하지 않습니다. (vid03.mp4)
+                    </video>
+                    <p class="mt-6 text-xl text-gray-700 font-medium">
+                        "매일 아침, 피부가 깨끗하게 깨어나는 기분. 저는 [제품명]으로 시작합니다."
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CTA & FOOTER SECTION -->
+    <section id="purchase-section" class="py-16 bg-[#0A6EBD] text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                오늘, 당신의 피부에 순수함을 더하세요
+            </h2>
+            <p class="text-xl mb-8 font-light">
+                지금 바로 구매하고 맑고 건강한 피부를 경험해 보세요.
+            </p>
+            <a href="#" class="inline-block px-10 py-4 bg-white text-[#0A6EBD] text-xl font-bold rounded-full hover:bg-gray-100 transition duration-300 shadow-2xl">
+                지금 특별 할인 혜택 받기
+            </a>
+        </div>
+    </section>
+
+    <footer class="py-8 bg-gray-800 text-center text-gray-400 text-sm">
+        <p>&copy; 2024 Pure Radiance. All Rights Reserved. | 본 페이지는 홍보 목적으로 제작되었습니다.</p>
+    </footer>
+
+</body>
+</html>
