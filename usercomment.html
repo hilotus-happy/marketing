@@ -6,105 +6,137 @@
     <title>퓨어 래디언스 - 고객 후기</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
+        /* 기본 폰트 설정 및 배경 */
         body {
             font-family: "Inter", sans-serif;
             background-color: #F7F7F7;
         }
-        /* 메인 페이지로 돌아가기 버튼 색상 통일 */
-        .back-to-home {
-            background-color: #0A6EBD;
-        }
     </style>
 </head>
-<body>
+<body class="min-h-screen flex flex-col">
 
-    <header class="bg-white shadow-md">
+    <header class="bg-white shadow-md sticky top-0 z-10">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center max-w-6xl">
-            <h1 class="text-3xl font-bold text-[#0A6EBD]">
+            <a href="index.html" class="text-2xl font-bold text-[#0A6EBD]">
                 Pure Radiance
-            </h1>
-            <a href="index.html" class="back-to-home text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-blue-700 transition duration-300">
-                🏠 메인 페이지로 돌아가기
             </a>
+            <nav>
+                <a href="index.html" class="text-gray-600 hover:text-[#0A6EBD] font-medium mr-4">
+                    홈으로
+                </a>
+                <a href="#review-form" class="text-[#0A6EBD] font-semibold border-b-2 border-[#0A6EBD]">
+                    후기 작성
+                </a>
+            </nav>
         </div>
     </header>
 
-    <section class="py-16 md:py-24">
-        <div class="container mx-auto px-6 max-w-6xl">
-            <h2 class="text-4xl font-extrabold text-center mb-12 text-gray-800">
+    <main class="flex-grow py-16 md:py-24">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-center mb-4 text-gray-800">
                 ✨ 고객님의 솔직한 후기
-            </h2>
+            </h1>
+            <p class="text-center text-xl text-gray-600 mb-12">
+                Pure Radiance와 함께한 경험을 공유해 주세요!
+            </p>
 
-            <div class="bg-white p-8 md:p-10 rounded-xl shadow-lg mb-16 border border-gray-200">
-                <h3 class="text-2xl font-bold text-[#0A6EBD] mb-6">
-                    후기 작성하기
-                </h3>
-                <form action="#" method="POST" class="space-y-4">
-                    <div>
-                        <label for="name" class="block text-sm font-medium text-gray-700">작성자</label>
-                        <input type="text" id="name" name="name" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm p-3 focus:border-[#0A6EBD] focus:ring-[#0A6EBD]">
+            <div id="review-list" class="space-y-8 mb-16">
+                
+                <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-[#0A6EBD]">
+                    <div class="flex justify-between items-start mb-3">
+                        <span class="text-xl font-semibold text-gray-800">
+                            너무 만족해요! (건성 피부 구원템)
+                        </span>
+                        <span class="text-yellow-500 font-bold text-lg">
+                            ★★★★★
+                        </span>
                     </div>
-                    <div>
-                        <label for="rating" class="block text-sm font-medium text-gray-700">만족도 (1-5점)</label>
-                        <select id="rating" name="rating" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm p-3 focus:border-[#0A6EBD] focus:ring-[#0A6EBD]">
-                            <option>5점 - 최고예요!</option>
-                            <option>4점 - 만족해요</option>
-                            <option>3점 - 보통이에요</option>
-                            <option>2점 - 조금 아쉬워요</option>
-                            <option>1점 - 별로예요</option>
-                        </select>
+                    <p class="text-gray-600 leading-relaxed mb-3">
+                        건성이라 겨울에 항상 속건조에 시달렸는데, 이 로션 쓰고 나서 피부 당김이 사라졌어요. 끈적이지 않으면서 보습력이 최고입니다. 재구매 의사 100%!
+                    </p>
+                    <small class="text-gray-400">
+                        작성자: 김*희 (2024-11-05)
+                    </small>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-gray-300">
+                    <div class="flex justify-between items-start mb-3">
+                        <span class="text-xl font-semibold text-gray-800">
+                            산뜻하고 순해요
+                        </span>
+                        <span class="text-yellow-500 font-bold text-lg">
+                            ★★★★☆
+                        </span>
                     </div>
-                    <div>
-                        <label for="review" class="block text-sm font-medium text-gray-700">내용</label>
-                        <textarea id="review" name="review" rows="4" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm p-3 focus:border-[#0A6EBD] focus:ring-[#0A6EBD]"></textarea>
+                    <p class="text-gray-600 leading-relaxed mb-3">
+                        지성이라 무거운 로션은 피했는데, 이건 흡수가 빨라서 좋았어요. 다만 향이 조금만 더 산뜻하면 좋을 것 같아요. 전반적으로는 만족합니다.
+                    </p>
+                    <small class="text-gray-400">
+                        작성자: 박*민 (2024-11-03)
+                    </small>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-gray-300">
+                    <div class="flex justify-between items-start mb-3">
+                        <span class="text-xl font-semibold text-gray-800">
+                            민감성 피부에 딱! 진정 효과 확실해요.
+                        </span>
+                        <span class="text-yellow-500 font-bold text-lg">
+                            ★★★★★
+                        </span>
                     </div>
-                    <button type="submit" class="w-full px-6 py-3 bg-[#0A6EBD] text-white font-semibold rounded-lg hover:bg-blue-700 transition duration-300 shadow-md">
-                        후기 등록하기
-                    </button>
-                </form>
+                    <p class="text-gray-600 leading-relaxed mb-3">
+                        성분이 순해서 그런지 트러블이 올라오지 않네요. 붉은 기 진정에도 도움이 되는 것 같습니다. 매일 안심하고 사용할 수 있는 제품이에요.
+                    </p>
+                    <small class="text-gray-400">
+                        작성자: 이*영 (2024-10-30)
+                    </small>
+                </div>
+
             </div>
             
-            <div class="space-y-8">
+            <section id="review-form" class="mt-20 pt-10 border-t border-gray-200">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center">
+                    ✍️ 후기 작성하기
+                </h2>
                 
-                <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-[#0A6EBD]">
-                    <div class="flex justify-between items-center mb-3">
-                        <span class="text-xl font-semibold text-gray-800">김**나</span>
-                        <span class="text-yellow-500 font-bold">★★★★★ (5점)</span>
+                <form class="bg-white p-8 rounded-xl shadow-2xl max-w-lg mx-auto space-y-4">
+                    
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-700 mb-1">작성자 닉네임</label>
+                        <input type="text" id="name" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-[#0A6EBD] focus:border-[#0A6EBD]" placeholder="예: 퓨어홀릭" required>
                     </div>
-                    <p class="text-gray-600 leading-relaxed">
-                        끈적이는 로션을 정말 싫어하는데, 이건 바르자마자 산뜻하게 흡수되면서도 속건조를 잘 잡아줘서 놀랐어요! 민감한 제 피부에도 자극이 없어서 정착했습니다. Pure Radiance 정말 강추해요!
-                    </p>
-                    <span class="block text-right text-sm text-gray-400 mt-3">2025.11.05 작성</span>
-                </div>
 
-                <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-gray-400">
-                    <div class="flex justify-between items-center mb-3">
-                        <span class="text-xl font-semibold text-gray-800">박**수</span>
-                        <span class="text-yellow-500 font-bold">★★★★☆ (4점)</span>
+                    <div>
+                        <label for="rating" class="block text-sm font-medium text-gray-700 mb-1">별점</label>
+                        <select id="rating" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-[#0A6EBD] focus:border-[#0A6EBD]" required>
+                            <option value="">별점을 선택해 주세요</option>
+                            <option value="5">★★★★★ (매우 만족)</option>
+                            <option value="4">★★★★☆ (만족)</option>
+                            <option value="3">★★★☆☆ (보통)</option>
+                            <option value="2">★★☆☆☆ (불만)</option>
+                            <option value="1">★☆☆☆☆ (매우 불만)</option>
+                        </select>
                     </div>
-                    <p class="text-gray-600 leading-relaxed">
-                        보습력은 훌륭합니다. 다만 향이 조금 더 은은했으면 좋겠어요. 그래도 다음에는 대용량으로 구매할 생각입니다.
-                    </p>
-                    <span class="block text-right text-sm text-gray-400 mt-3">2025.10.29 작성</span>
-                </div>
-                
-                <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-[#0A6EBD]">
-                    <div class="flex justify-between items-center mb-3">
-                        <span class="text-xl font-semibold text-gray-800">이**진</span>
-                        <span class="text-yellow-500 font-bold">★★★★★ (5점)</span>
+                    
+                    <div>
+                        <label for="review" class="block text-sm font-medium text-gray-700 mb-1">후기 내용</label>
+                        <textarea id="review" rows="5" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-[#0A6EBD] focus:border-[#0A6EBD]" placeholder="제품을 사용하면서 느낀점을 상세하게 적어주세요." required></textarea>
                     </div>
-                    <p class="text-gray-600 leading-relaxed">
-                        요즘 피부가 너무 푸석했는데, 이 로션 쓰고 나서 피부결이 정말 좋아졌어요. 아침에 화장도 잘 먹어서 만족도가 높습니다. 재구매 의사 100%입니다!
+                    
+                    <button type="submit" class="w-full py-3 bg-[#0A6EBD] text-white font-semibold rounded-lg hover:bg-blue-700 transition duration-300 shadow-md">
+                        후기 등록하기
+                    </button>
+                    <p class="text-center text-xs text-gray-500 mt-2">
+                        *후기 등록을 위해서는 실제 웹 서버 구축이 필요하며, 현재는 UI만 제공됩니다.
                     </p>
-                    <span class="block text-right text-sm text-gray-400 mt-3">2025.10.20 작성</span>
-                </div>
-
-            </div>
+                </form>
+            </section>
 
         </div>
-    </section>
+    </main>
 
-    <footer class="py-8 bg-gray-800 text-center text-gray-400 text-sm">
+    <footer class="py-8 bg-gray-800 text-center text-gray-400 text-sm mt-auto">
         <p>&copy; 2024 Pure Radiance. All Rights Reserved. | 본 페이지는 홍보 목적으로 제작되었습니다.</p>
     </footer>
 
