@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-4TCDDVRC3X"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -14,15 +13,13 @@
   gtag('config', 'G-4TCDDVRC3X');
 </script>
     
-     <!-- 오픈그래프 설정 -->
-    <meta property="og:title" content="Pure Radiance - 촉촉함 그 이상, 피부 본연의 힘">
+     <meta property="og:title" content="Pure Radiance - 촉촉함 그 이상, 피부 본연의 힘">
     <meta property="og:description" content="자연이 선사하는 순수함, 피부에 깊은 안식처를 선물하세요.">
     <meta property="og:image" content="img01.png">
     <meta property="og:url" content="https://hilotus-happy.github.io/marketing">
     <meta property="og:type" content="website">
     
     <title>퓨어 래디언스 로션 - 순수하고 깨끗한 보습</title>
-    <!-- Tailwind CSS 로드 -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         /* 기본 폰트 설정 및 배경 */
@@ -76,9 +73,7 @@
 </head>
 <body>
 
-    <!-- HERO SECTION (vid01.mp4: 깨끗한 이미지 배경 비디오) -->
     <section class="hero-video-container">
-        <!-- vid01.mp4: 제품의 깨끗한 이미지와 분위기 강조 (자동 재생) -->
         <video class="hero-video" src="vid01.mp4" autoplay muted loop playsinline>
             <source src="vid01.mp4" type="video/mp4">
             브라우저가 비디오 재생을 지원하지 않습니다. (vid01.mp4)
@@ -92,33 +87,33 @@
                 <p class="text-xl md:text-2xl text-gray-700 font-light mb-8">
                     자연이 선사하는 순수함, 피부에 깊은 안식처를 선물하세요.
                 </p>
-                <a href="#purchase-section" class="inline-block px-8 py-3 bg-[#0A6EBD] text-white text-lg font-semibold rounded-full hover:bg-blue-700 transition duration-300 transform hover:scale-105 shadow-xl">
-                    구매하기
-                </a>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="#purchase-section" class="inline-block px-8 py-3 bg-[#0A6EBD] text-white text-lg font-semibold rounded-full hover:bg-blue-700 transition duration-300 transform hover:scale-105 shadow-xl">
+                        구매하기
+                    </a>
+                    <a href="usercomment.html" class="inline-block px-8 py-3 bg-white border border-[#0A6EBD] text-[#0A6EBD] text-lg font-semibold rounded-full hover:bg-gray-100 transition duration-300 transform hover:scale-105 shadow-xl">
+                        고객 후기
+                    </a>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- FEATURES & DETAIL SECTION (vid02.mp4 및 vid03.mp4 통합) -->
     <section class="py-20 md:py-32 bg-white">
         <div class="container mx-auto px-6 max-w-6xl">
             <h2 class="text-4xl font-bold text-center mb-16 text-gray-800">
                 촉촉함 그 이상, 피부 본연의 힘
             </h2>
             
-            <!-- 1. vid02.mp4와 텍스트 설명 (제형/성분 강조) -->
             <div class="flex flex-col md:flex-row items-center gap-12 mb-20">
                 
-                <!-- 비디오 컨테이너 (좌측) -->
                 <div class="w-full md:w-1/2">
-                    <!-- vid02.mp4: 질감 및 사용감을 보여주는 상세 비디오 (컨트롤 제공) -->
                     <video class="detail-video" controls loop poster="placeholder_vid02.jpg">
                         <source src="vid02.mp4" type="video/mp4">
                         브라우저가 비디오 재생을 지원하지 않습니다. (vid02.mp4)
                     </video>
                 </div>
 
-                <!-- 텍스트 정보 컨테이너 (우측) -->
                 <div class="w-full md:w-1/2 space-y-8">
                     <div class="p-6 bg-gray-50 rounded-xl border border-gray-200">
                         <h3 class="text-2xl font-semibold text-[#0A6EBD] mb-2">
@@ -150,14 +145,12 @@
 
             </div>
             
-            <!-- 2. vid03.mp4 단독 섹션 (모델 사용 모습 강조) -->
             <div class="text-center mt-20 pt-10 border-t border-gray-100">
                 <h2 class="text-3xl font-bold text-gray-800 mb-8">
                     피부 전문가의 선택, 믿을 수 있는 매일의 케어
                 </h2>
                 <div class="max-w-4xl mx-auto">
-                     <!-- vid03.mp4: 모델 사용 모습/피부 변화 강조 -->
-                    <video class="detail-video mx-auto" controls loop poster="placeholder_vid03.jpg">
+                     <video class="detail-video mx-auto" controls loop poster="placeholder_vid03.jpg">
                         <source src="vid03.mp4" type="video/mp4">
                         브라우저가 비디오 재생을 지원하지 않습니다. (vid03.mp4)
                     </video>
@@ -170,7 +163,6 @@
         </div>
     </section>
 
-    <!-- CTA & FOOTER SECTION -->
     <section id="purchase-section" class="py-16 bg-[#0A6EBD] text-white">
         <div class="container mx-auto px-6 text-center">
             <h2 class="text-3xl md:text-4xl font-bold mb-4">
@@ -191,5 +183,3 @@
 
 </body>
 </html>
-
-
